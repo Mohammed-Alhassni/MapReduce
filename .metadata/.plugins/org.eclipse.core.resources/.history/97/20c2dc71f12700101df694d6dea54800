@@ -10,7 +10,7 @@ public class BuildDataset {
 
 	    long startNs = System.nanoTime();
 
-	    BlocksExtractor.extractBlocks(MainClass.samplePath);
+	    BlocksExtractor.extractBlocks(samplePath);
 
 	    long durationMs = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNs);
 	    System.out.println("Done, took " + durationMs + "ms");

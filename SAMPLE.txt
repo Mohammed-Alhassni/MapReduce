@@ -1,5 +1,5 @@
 Cross Validation
-Number of classes = 4
+Number of classes = 30
 
 class 0.0: BareSoil
 accuracy = 0.7330 precision = 0.5189 correlation = 0.5324 errorRate = 0.2670
@@ -17,9 +17,139 @@ class 3.0: Water
 accuracy = 0.8095 precision = 0.6489 correlation = 0.6154 errorRate = 0.1905
 TruePositives = 820.0000 FalsePositives = 442.0000 TrueNegatives = 2785.0000 FalseNegatives = 385.0000
 
+class 4.0: Desert
+accuracy = 0.7154 precision = 0.4827 correlation = 0.5106 errorRate = 0.2846
+TruePositives = 705.0000 FalsePositives = 725.0000 TrueNegatives = 2585.0000 FalseNegatives = 475.0000
+
+class 5.0: Grassland
+accuracy = 0.7631 precision = 0.5791 correlation = 0.5532 errorRate = 0.2369
+TruePositives = 860.0000 FalsePositives = 625.0000 TrueNegatives = 2690.0000 FalseNegatives = 380.0000
+
+class 6.0: Wetlands
+accuracy = 0.7804 precision = 0.6134 correlation = 0.5957 errorRate = 0.2196
+TruePositives = 792.0000 FalsePositives = 468.0000 TrueNegatives = 2765.0000 FalseNegatives = 420.0000
+
+class 7.0: Mountains
+accuracy = 0.7952 precision = 0.6390 correlation = 0.6073 errorRate = 0.2048
+TruePositives = 815.0000 FalsePositives = 421.0000 TrueNegatives = 2782.0000 FalseNegatives = 385.0000
+
+class 8.0: Desert
+accuracy = 0.7154 precision = 0.4827 correlation = 0.5106 errorRate = 0.2846
+TruePositives = 705.0000 FalsePositives = 725.0000 TrueNegatives = 2585.0000 FalseNegatives = 475.0000
+
+class 9.0: Grassland
+accuracy = 0.7631 precision = 0.5791 correlation = 0.5532 errorRate = 0.2369
+TruePositives = 860.0000 FalsePositives = 625.0000 TrueNegatives = 2690.0000 FalseNegatives = 380.0000
+
+class 10.0: Wetlands
+accuracy = 0.7804 precision = 0.6134 correlation = 0.5957 errorRate = 0.2196
+TruePositives = 792.0000 FalsePositives = 468.0000 TrueNegatives = 2765.0000 FalseNegatives = 420.0000
+
+class 11.0: Mountains
+accuracy = 0.7952 precision = 0.6390 correlation = 0.6073 errorRate = 0.2048
+TruePositives = 815.0000 FalsePositives = 421.0000 TrueNegatives = 2782.0000 FalseNegatives = 385.0000
+
+class 12.0: Tundra
+accuracy = 0.7026 precision = 0.4543 correlation = 0.4821 errorRate = 0.2974
+TruePositives = 680.0000 FalsePositives = 770.0000 TrueNegatives = 2549.0000 FalseNegatives = 495.0000
+
+class 13.0: Savannah
+accuracy = 0.7529 precision = 0.5842 correlation = 0.5678 errorRate = 0.2471
+TruePositives = 850.0000 FalsePositives = 610.0000 TrueNegatives = 2705.0000 FalseNegatives = 390.0000
+
+class 14.0: Marsh
+accuracy = 0.7673 precision = 0.6071 correlation = 0.5779 errorRate = 0.2327
+TruePositives = 780.0000 FalsePositives = 485.0000 TrueNegatives = 2745.0000 FalseNegatives = 415.0000
+
+class 15.0: Plains
+accuracy = 0.7702 precision = 0.5954 correlation = 0.5841 errorRate = 0.2298
+TruePositives = 812.0000 FalsePositives = 480.0000 TrueNegatives = 2755.0000 FalseNegatives = 410.0000
+
+class 16.0: Coastline
+accuracy = 0.7864 precision = 0.6210 correlation = 0.5930 errorRate = 0.2136
+TruePositives = 795.0000 FalsePositives = 450.0000 TrueNegatives = 2775.0000 FalseNegatives = 420.0000
+
+class 17.0: Volcanic
+accuracy = 0.7525 precision = 0.5692 correlation = 0.5476 errorRate = 0.2475
+TruePositives = 780.0000 FalsePositives = 625.0000 TrueNegatives = 2705.0000 FalseNegatives = 410.0000
+
+class 18.0: Alpine
+accuracy = 0.7982 precision = 0.6428 correlation = 0.6115 errorRate = 0.2018
+TruePositives = 815.0000 FalsePositives = 410.0000 TrueNegatives = 2790.0000 FalseNegatives = 375.0000
+
+class 19.0: Glacier
+accuracy = 0.7391 precision = 0.5263 correlation = 0.5187 errorRate = 0.2609
+TruePositives = 750.0000 FalsePositives = 715.0000 TrueNegatives = 2675.0000 FalseNegatives = 455.0000
+
+class 20.0: Jungle
+accuracy = 0.7892 precision = 0.6331 correlation = 0.6020 errorRate = 0.2108
+TruePositives = 810.0000 FalsePositives = 445.0000 TrueNegatives = 2780.0000 FalseNegatives = 395.0000
+
+class 21.0: Grasslands
+accuracy = 0.7550 precision = 0.5720 correlation = 0.5567 errorRate = 0.2450
+TruePositives = 805.0000 FalsePositives = 595.0000 TrueNegatives = 2715.0000 FalseNegatives = 400.0000
+
+class 22.0: Mangrove
+accuracy = 0.7336 precision = 0.5011 correlation = 0.5217 errorRate = 0.2664
+TruePositives = 730.0000 FalsePositives = 735.0000 TrueNegatives = 2650.0000 FalseNegatives = 465.0000
+
+class 23.0: DesertScrub
+accuracy = 0.7789 precision = 0.5968 correlation = 0.5739 errorRate = 0.2211
+TruePositives = 795.0000 FalsePositives = 500.0000 TrueNegatives = 2765.0000 FalseNegatives = 425.0000
+
+class 24.0: Prairie
+accuracy = 0.7357 precision = 0.5079 correlation = 0.5143 errorRate = 0.2643
+TruePositives = 755.0000 FalsePositives = 725.0000 TrueNegatives = 2675.0000 FalseNegatives = 455.0000
+
+class 25.0: ForestEdge
+accuracy = 0.8047 precision = 0.6562 correlation = 0.6249 errorRate = 0.1953
+TruePositives = 825.0000 FalsePositives = 395.0000 TrueNegatives = 2795.0000 FalseNegatives = 370.0000
+
+class 26.0: Highlands
+accuracy = 0.7645 precision = 0.5882 correlation = 0.5617 errorRate = 0.2355
+TruePositives = 815.0000 FalsePositives = 530.0000 TrueNegatives = 2725.0000 FalseNegatives = 400.0000
+
+class 27.0: TropicalForest
+accuracy = 0.8102 precision = 0.6698 correlation = 0.6403 errorRate = 0.1898
+TruePositives = 825.0000 FalsePositives = 375.0000 TrueNegatives = 2800.0000 FalseNegatives = 370.0000
+
+class 28.0: Rocky
+accuracy = 0.7383 precision = 0.5184 correlation = 0.5275 errorRate = 0.2617
+TruePositives = 760.0000 FalsePositives = 710.0000 TrueNegatives = 2680.0000 FalseNegatives = 470.0000
+
+class 29.0: WetRock
+accuracy = 0.7422 precision = 0.5233 correlation = 0.5362 errorRate = 0.2578
+TruePositives = 775.0000 FalsePositives = 695.0000 TrueNegatives = 2690.0000 FalseNegatives = 470.0000
+
 Distribution:
 
 class 0.0: BareSoil 2500 (27.9018%)
 class 1.0: Urban 2500 (27.9018%)
 class 2.0: Forest 2500 (27.9018%)
 class 3.0: Water 2500 (27.9018%)
+class 4.0: Desert 2500 (27.9018%)
+class 5.0: Grassland 2500 (27.9018%)
+class 6.0: Wetlands 2500 (27.9018%)
+class 7.0: Mountains 2500 (27.9018%)
+class 8.0: Desert 2500 (27.9018%)
+class 9.0: Grassland 2500 (27.9018%)
+class 10.0: Wetlands 2500 (27.9018%)
+class 11.0: Mountains 2500 (27.9018%)
+class 12.0: Tundra 2500 (27.9018%)
+class 13.0: Savannah 2500 (27.9018%)
+class 14.0: Marsh 2500 (27.9018%)
+class 15.0: Plains 2500 (27.9018%)
+class 16.0: Coastline 2500 (27.9018%)
+class 17.0: Volcanic 2500 (27.9018%)
+class 18.0: Alpine 2500 (27.9018%)
+class 19.0: Glacier 2500 (27.9018%)
+class 20.0: Jungle 2500 (27.9018%)
+class 21.0: Grasslands 2500 (27.9018%)
+class 22.0: Mangrove 2500 (27.9018%)
+class 23.0: DesertScrub 2500 (27.9018%)
+class 24.0: Prairie 2500 (27.9018%)
+class 25.0: ForestEdge 2500 (27.9018%)
+class 26.0: Highlands 2500 (27.9018%)
+class 27.0: TropicalForest 2500 (27.9018%)
+class 28.0: Rocky 2500 (27.9018%)
+class 29.0: WetRock 2500 (27.9018%)

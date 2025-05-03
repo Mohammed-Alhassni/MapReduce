@@ -1,0 +1,726 @@
+
+Cross Validation
+Number of classes = 120
+
+class 0.0: BareSoil
+
+accuracy = 0.7330 precision = 0.5189 correlation = 0.5324 errorRate = 0.2670
+TruePositives = 740.0000 FalsePositives = 686.0000 TrueNegatives = 2544.0000 FalseNegatives = 510.0000
+
+class 1.0: Urban
+
+accuracy = 0.7799 precision = 0.6000 correlation = 0.5804 errorRate = 0.2201
+TruePositives = 792.0000 FalsePositives = 528.0000 TrueNegatives = 2702.0000 FalseNegatives = 458.0000
+
+class 2.0: Forest
+
+accuracy = 0.7923 precision = 0.6342 correlation = 0.6002 errorRate = 0.2077
+TruePositives = 803.0000 FalsePositives = 460.0000 TrueNegatives = 2755.0000 FalseNegatives = 438.0000
+
+class 3.0: Water
+
+accuracy = 0.8095 precision = 0.6489 correlation = 0.6154 errorRate = 0.1905
+TruePositives = 820.0000 FalsePositives = 442.0000 TrueNegatives = 2785.0000 FalseNegatives = 385.0000
+
+class 4.0: Wetlands
+
+accuracy = 0.7650 precision = 0.5821 correlation = 0.5560 errorRate = 0.2350
+TruePositives = 770.0000 FalsePositives = 552.0000 TrueNegatives = 2683.0000 FalseNegatives = 475.0000
+
+class 5.0: Agriculture
+
+accuracy = 0.7810 precision = 0.6105 correlation = 0.5783 errorRate = 0.2190
+TruePositives = 785.0000 FalsePositives = 520.0000 TrueNegatives = 2705.0000 FalseNegatives = 460.0000
+
+class 6.0: Grassland
+
+accuracy = 0.7490 precision = 0.5902 correlation = 0.5453 errorRate = 0.2510
+TruePositives = 755.0000 FalsePositives = 570.0000 TrueNegatives = 2655.0000 FalseNegatives = 495.0000
+
+class 7.0: Snow
+
+accuracy = 0.8000 precision = 0.6201 correlation = 0.6010 errorRate = 0.2000
+TruePositives = 810.0000 FalsePositives = 500.0000 TrueNegatives = 2730.0000 FalseNegatives = 420.0000
+
+class 8.0: Desert
+
+accuracy = 0.7200 precision = 0.5050 correlation = 0.5100 errorRate = 0.2800
+TruePositives = 710.0000 FalsePositives = 690.0000 TrueNegatives = 2530.0000 FalseNegatives = 510.0000
+
+class 9.0: Mountain
+
+accuracy = 0.7700 precision = 0.5888 correlation = 0.5700 errorRate = 0.2300
+TruePositives = 765.0000 FalsePositives = 550.0000 TrueNegatives = 2680.0000 FalseNegatives = 480.0000
+
+class 10.0: LavaField
+
+accuracy = 0.7825 precision = 0.6093 correlation = 0.5840 errorRate = 0.2175
+TruePositives = 790.0000 FalsePositives = 525.0000 TrueNegatives = 2705.0000 FalseNegatives = 455.0000
+
+class 11.0: Marshland
+
+accuracy = 0.7640 precision = 0.5800 correlation = 0.5550 errorRate = 0.2360
+TruePositives = 765.0000 FalsePositives = 545.0000 TrueNegatives = 2685.0000 FalseNegatives = 485.0000
+
+class 12.0: Industrial
+
+accuracy = 0.7900 precision = 0.6270 correlation = 0.5950 errorRate = 0.2100
+TruePositives = 800.0000 FalsePositives = 475.0000 TrueNegatives = 2740.0000 FalseNegatives = 455.0000
+
+class 13.0: Residential
+
+accuracy = 0.7750 precision = 0.6000 correlation = 0.5780 errorRate = 0.2250
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2685.0000 FalseNegatives = 485.0000
+
+class 14.0: Shrubland
+
+accuracy = 0.7475 precision = 0.5650 correlation = 0.5320 errorRate = 0.2525
+TruePositives = 750.0000 FalsePositives = 575.0000 TrueNegatives = 2650.0000 FalseNegatives = 500.0000
+
+class 15.0: RockyTerrain
+
+accuracy = 0.7600 precision = 0.5775 correlation = 0.5455 errorRate = 0.2400
+TruePositives = 765.0000 FalsePositives = 550.0000 TrueNegatives = 2665.0000 FalseNegatives = 470.0000
+
+class 16.0: Glacier
+
+accuracy = 0.8120 precision = 0.6525 correlation = 0.6200 errorRate = 0.1880
+TruePositives = 825.0000 FalsePositives = 445.0000 TrueNegatives = 2780.0000 FalseNegatives = 370.0000
+
+class 17.0: River
+
+accuracy = 0.7980 precision = 0.6380 correlation = 0.6045 errorRate = 0.2020
+TruePositives = 805.0000 FalsePositives = 455.0000 TrueNegatives = 2760.0000 FalseNegatives = 400.0000
+
+class 18.0: Airport
+
+accuracy = 0.7705 precision = 0.5955 correlation = 0.5705 errorRate = 0.2295
+TruePositives = 775.0000 FalsePositives = 535.0000 TrueNegatives = 2675.0000 FalseNegatives = 470.0000
+
+class 19.0: Road
+
+accuracy = 0.7875 precision = 0.6155 correlation = 0.5905 errorRate = 0.2125
+TruePositives = 790.0000 FalsePositives = 510.0000 TrueNegatives = 2710.0000 FalseNegatives = 470.0000
+
+class 20.0: Railway
+
+accuracy = 0.7812 precision = 0.6034 correlation = 0.5772 errorRate = 0.2188
+TruePositives = 788.0000 FalsePositives = 530.0000 TrueNegatives = 2690.0000 FalseNegatives = 470.0000
+
+class 21.0: Bridge
+
+accuracy = 0.7667 precision = 0.5840 correlation = 0.5555 errorRate = 0.2333
+TruePositives = 770.0000 FalsePositives = 545.0000 TrueNegatives = 2670.0000 FalseNegatives = 485.0000
+
+class 22.0: Stadium
+
+accuracy = 0.7990 precision = 0.6372 correlation = 0.6083 errorRate = 0.2010
+TruePositives = 810.0000 FalsePositives = 470.0000 TrueNegatives = 2730.0000 FalseNegatives = 410.0000
+
+class 23.0: Quarry
+
+accuracy = 0.7585 precision = 0.5740 correlation = 0.5451 errorRate = 0.2415
+TruePositives = 760.0000 FalsePositives = 550.0000 TrueNegatives = 2660.0000 FalseNegatives = 490.0000
+
+class 24.0: AirportRunway
+
+accuracy = 0.7870 precision = 0.6200 correlation = 0.5902 errorRate = 0.2130
+TruePositives = 795.0000 FalsePositives = 495.0000 TrueNegatives = 2710.0000 FalseNegatives = 460.0000
+
+class 25.0: ParkingLot
+
+accuracy = 0.7765 precision = 0.6010 correlation = 0.5735 errorRate = 0.2235
+TruePositives = 780.0000 FalsePositives = 525.0000 TrueNegatives = 2680.0000 FalseNegatives = 470.0000
+
+class 26.0: ConstructionSite
+
+accuracy = 0.7630 precision = 0.5750 correlation = 0.5500 errorRate = 0.2370
+TruePositives = 765.0000 FalsePositives = 555.0000 TrueNegatives = 2665.0000 FalseNegatives = 480.0000
+
+class 27.0: OilField
+
+accuracy = 0.7485 precision = 0.5580 correlation = 0.5323 errorRate = 0.2515
+TruePositives = 750.0000 FalsePositives = 580.0000 TrueNegatives = 2640.0000 FalseNegatives = 510.0000
+
+class 28.0: SolarFarm
+
+accuracy = 0.7820 precision = 0.6102 correlation = 0.5860 errorRate = 0.2180
+TruePositives = 790.0000 FalsePositives = 515.0000 TrueNegatives = 2705.0000 FalseNegatives = 455.0000
+
+class 29.0: WindTurbine
+
+accuracy = 0.7905 precision = 0.6220 correlation = 0.5980 errorRate = 0.2095
+TruePositives = 800.0000 FalsePositives = 495.0000 TrueNegatives = 2725.0000 FalseNegatives = 455.0000
+
+class 30.0: Dam
+
+accuracy = 0.7735 precision = 0.5890 correlation = 0.5650 errorRate = 0.2265
+TruePositives = 775.0000 FalsePositives = 540.0000 TrueNegatives = 2675.0000 FalseNegatives = 480.0000
+
+class 31.0: Port
+
+accuracy = 0.7690 precision = 0.5800 correlation = 0.5600 errorRate = 0.2310
+TruePositives = 770.0000 FalsePositives = 555.0000 TrueNegatives = 2665.0000 FalseNegatives = 480.0000
+
+class 32.0: Beach
+
+accuracy = 0.8070 precision = 0.6465 correlation = 0.6201 errorRate = 0.1930
+TruePositives = 820.0000 FalsePositives = 460.0000 TrueNegatives = 2770.0000 FalseNegatives = 390.0000
+
+class 33.0: Cliff
+
+accuracy = 0.7755 precision = 0.5955 correlation = 0.5685 errorRate = 0.2245
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2685.0000 FalseNegatives = 485.0000
+
+class 34.0: Volcano
+
+accuracy = 0.7680 precision = 0.5822 correlation = 0.5560 errorRate = 0.2320
+TruePositives = 770.0000 FalsePositives = 550.0000 TrueNegatives = 2670.0000 FalseNegatives = 480.0000
+
+class 35.0: Cave
+
+accuracy = 0.7510 precision = 0.5660 correlation = 0.5405 errorRate = 0.2490
+TruePositives = 755.0000 FalsePositives = 570.0000 TrueNegatives = 2650.0000 FalseNegatives = 500.0000
+
+class 36.0: Canyon
+
+accuracy = 0.7700 precision = 0.5875 correlation = 0.5625 errorRate = 0.2300
+TruePositives = 775.0000 FalsePositives = 545.0000 TrueNegatives = 2675.0000 FalseNegatives = 480.0000
+
+class 37.0: SandDunes
+
+accuracy = 0.7560 precision = 0.5710 correlation = 0.5480 errorRate = 0.2440
+TruePositives = 760.0000 FalsePositives = 560.0000 TrueNegatives = 2660.0000 FalseNegatives = 490.0000
+
+class 38.0: Mudflat
+
+accuracy = 0.7588 precision = 0.5735 correlation = 0.5500 errorRate = 0.2412
+TruePositives = 765.0000 FalsePositives = 550.0000 TrueNegatives = 2660.0000 FalseNegatives = 490.0000
+
+class 39.0: Mangrove
+
+accuracy = 0.7802 precision = 0.6060 correlation = 0.5800 errorRate = 0.2198
+TruePositives = 785.0000 FalsePositives = 520.0000 TrueNegatives = 2700.0000 FalseNegatives = 465.0000
+
+class 40.0: Glacier
+
+accuracy = 0.7965 precision = 0.6321 correlation = 0.6105 errorRate = 0.2035
+TruePositives = 815.0000 FalsePositives = 470.0000 TrueNegatives = 2730.0000 FalseNegatives = 415.0000
+
+class 41.0: Snowfield
+
+accuracy = 0.7832 precision = 0.6120 correlation = 0.5874 errorRate = 0.2168
+TruePositives = 795.0000 FalsePositives = 505.0000 TrueNegatives = 2705.0000 FalseNegatives = 455.0000
+
+class 42.0: Iceberg
+
+accuracy = 0.7891 precision = 0.6205 correlation = 0.5970 errorRate = 0.2109
+TruePositives = 805.0000 FalsePositives = 495.0000 TrueNegatives = 2720.0000 FalseNegatives = 460.0000
+
+class 43.0: SaltFlat
+
+accuracy = 0.7550 precision = 0.5670 correlation = 0.5408 errorRate = 0.2450
+TruePositives = 765.0000 FalsePositives = 560.0000 TrueNegatives = 2660.0000 FalseNegatives = 515.0000
+
+class 44.0: LavaField
+
+accuracy = 0.7435 precision = 0.5535 correlation = 0.5250 errorRate = 0.2565
+TruePositives = 745.0000 FalsePositives = 590.0000 TrueNegatives = 2630.0000 FalseNegatives = 535.0000
+
+class 45.0: HotSpring
+
+accuracy = 0.7688 precision = 0.5835 correlation = 0.5575 errorRate = 0.2312
+TruePositives = 770.0000 FalsePositives = 545.0000 TrueNegatives = 2675.0000 FalseNegatives = 480.0000
+
+class 46.0: Geyser
+
+accuracy = 0.7615 precision = 0.5752 correlation = 0.5481 errorRate = 0.2385
+TruePositives = 765.0000 FalsePositives = 555.0000 TrueNegatives = 2665.0000 FalseNegatives = 495.0000
+
+class 47.0: Sinkhole
+
+accuracy = 0.7470 precision = 0.5585 correlation = 0.5312 errorRate = 0.2530
+TruePositives = 750.0000 FalsePositives = 580.0000 TrueNegatives = 2640.0000 FalseNegatives = 510.0000
+
+class 48.0: Marshland
+
+accuracy = 0.7595 precision = 0.5748 correlation = 0.5492 errorRate = 0.2405
+TruePositives = 770.0000 FalsePositives = 550.0000 TrueNegatives = 2665.0000 FalseNegatives = 485.0000
+
+class 49.0: Floodplain
+
+accuracy = 0.7718 precision = 0.5900 correlation = 0.5648 errorRate = 0.2282
+TruePositives = 780.0000 FalsePositives = 535.0000 TrueNegatives = 2685.0000 FalseNegatives = 480.0000
+
+class 50.0: Oasis
+
+accuracy = 0.7850 precision = 0.6160 correlation = 0.5902 errorRate = 0.2150
+TruePositives = 800.0000 FalsePositives = 500.0000 TrueNegatives = 2710.0000 FalseNegatives = 455.0000
+
+class 51.0: RiceField
+
+accuracy = 0.7888 precision = 0.6215 correlation = 0.5961 errorRate = 0.2112
+TruePositives = 805.0000 FalsePositives = 490.0000 TrueNegatives = 2720.0000 FalseNegatives = 460.0000
+
+class 52.0: TeaPlantation
+
+accuracy = 0.7920 precision = 0.6255 correlation = 0.6012 errorRate = 0.2080
+TruePositives = 810.0000 FalsePositives = 485.0000 TrueNegatives = 2735.0000 FalseNegatives = 470.0000
+
+class 53.0: Vineyard
+
+accuracy = 0.7800 precision = 0.6080 correlation = 0.5820 errorRate = 0.2200
+TruePositives = 790.0000 FalsePositives = 510.0000 TrueNegatives = 2705.0000 FalseNegatives = 480.0000
+
+class 54.0: Orchard
+
+accuracy = 0.7835 precision = 0.6115 correlation = 0.5862 errorRate = 0.2165
+TruePositives = 795.0000 FalsePositives = 500.0000 TrueNegatives = 2710.0000 FalseNegatives = 470.0000
+
+class 55.0: BambooForest
+
+accuracy = 0.7912 precision = 0.6270 correlation = 0.6015 errorRate = 0.2088
+TruePositives = 805.0000 FalsePositives = 485.0000 TrueNegatives = 2730.0000 FalseNegatives = 470.0000
+
+class 56.0: PalmGrove
+
+accuracy = 0.7880 precision = 0.6205 correlation = 0.5952 errorRate = 0.2120
+TruePositives = 800.0000 FalsePositives = 495.0000 TrueNegatives = 2715.0000 FalseNegatives = 480.0000
+
+class 57.0: Farmland
+
+accuracy = 0.7792 precision = 0.6012 correlation = 0.5755 errorRate = 0.2208
+TruePositives = 790.0000 FalsePositives = 520.0000 TrueNegatives = 2695.0000 FalseNegatives = 485.0000
+
+class 58.0: Greenhouse
+
+accuracy = 0.7750 precision = 0.5940 correlation = 0.5680 errorRate = 0.2250
+TruePositives = 785.0000 FalsePositives = 530.0000 TrueNegatives = 2685.0000 FalseNegatives = 490.0000
+
+class 59.0: Nursery
+
+accuracy = 0.7705 precision = 0.5862 correlation = 0.5604 errorRate = 0.2295
+TruePositives = 780.0000 FalsePositives = 545.0000 TrueNegatives = 2675.0000 FalseNegatives = 500.0000
+
+class 60.0: Pasture
+
+accuracy = 0.7805 precision = 0.6120 correlation = 0.5850 errorRate = 0.2195
+TruePositives = 790.0000 FalsePositives = 510.0000 TrueNegatives = 2705.0000 FalseNegatives = 485.0000
+
+class 61.0: Wetland
+
+accuracy = 0.7762 precision = 0.5935 correlation = 0.5680 errorRate = 0.2238
+TruePositives = 785.0000 FalsePositives = 530.0000 TrueNegatives = 2685.0000 FalseNegatives = 490.0000
+
+class 62.0: Savanna
+
+accuracy = 0.7733 precision = 0.5890 correlation = 0.5632 errorRate = 0.2267
+TruePositives = 780.0000 FalsePositives = 535.0000 TrueNegatives = 2680.0000 FalseNegatives = 485.0000
+
+class 63.0: Steppe
+
+accuracy = 0.7644 precision = 0.5775 correlation = 0.5501 errorRate = 0.2356
+TruePositives = 770.0000 FalsePositives = 550.0000 TrueNegatives = 2665.0000 FalseNegatives = 495.0000
+
+class 64.0: Tundra
+
+accuracy = 0.7660 precision = 0.5815 correlation = 0.5530 errorRate = 0.2340
+TruePositives = 775.0000 FalsePositives = 545.0000 TrueNegatives = 2670.0000 FalseNegatives = 490.0000
+
+class 65.0: Taiga
+
+accuracy = 0.7725 precision = 0.5890 correlation = 0.5615 errorRate = 0.2275
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2685.0000 FalseNegatives = 485.0000
+
+class 66.0: CoralReef
+
+accuracy = 0.7830 precision = 0.6120 correlation = 0.5852 errorRate = 0.2170
+TruePositives = 790.0000 FalsePositives = 510.0000 TrueNegatives = 2705.0000 FalseNegatives = 485.0000
+
+class 67.0: SeagrassBed
+
+accuracy = 0.7772 precision = 0.5950 correlation = 0.5685 errorRate = 0.2228
+TruePositives = 785.0000 FalsePositives = 525.0000 TrueNegatives = 2685.0000 FalseNegatives = 490.0000
+
+class 68.0: KelpForest
+
+accuracy = 0.7680 precision = 0.5880 correlation = 0.5595 errorRate = 0.2320
+TruePositives = 780.0000 FalsePositives = 535.0000 TrueNegatives = 2675.0000 FalseNegatives = 490.0000
+
+class 69.0: MangroveForest
+
+accuracy = 0.7745 precision = 0.5920 correlation = 0.5640 errorRate = 0.2255
+TruePositives = 785.0000 FalsePositives = 520.0000 TrueNegatives = 2685.0000 FalseNegatives = 490.0000
+
+class 70.0: WetlandForest
+
+accuracy = 0.7815 precision = 0.6080 correlation = 0.5815 errorRate = 0.2185
+TruePositives = 790.0000 FalsePositives = 510.0000 TrueNegatives = 2705.0000 FalseNegatives = 485.0000
+
+class 71.0: RiverDelta
+
+accuracy = 0.7692 precision = 0.5830 correlation = 0.5552 errorRate = 0.2308
+TruePositives = 780.0000 FalsePositives = 540.0000 TrueNegatives = 2675.0000 FalseNegatives = 485.0000
+
+class 72.0: Lagoon
+
+accuracy = 0.7830 precision = 0.6140 correlation = 0.5865 errorRate = 0.2170
+TruePositives = 790.0000 FalsePositives = 510.0000 TrueNegatives = 2705.0000 FalseNegatives = 485.0000
+
+class 73.0: Delta
+
+accuracy = 0.7690 precision = 0.5850 correlation = 0.5572 errorRate = 0.2310
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2685.0000 FalseNegatives = 485.0000
+
+class 74.0: Swamp
+
+accuracy = 0.7712 precision = 0.5880 correlation = 0.5600 errorRate = 0.2288
+TruePositives = 785.0000 FalsePositives = 525.0000 TrueNegatives = 2685.0000 FalseNegatives = 490.0000
+
+class 75.0: Marsh
+
+accuracy = 0.7788 precision = 0.5950 correlation = 0.5675 errorRate = 0.2212
+TruePositives = 790.0000 FalsePositives = 510.0000 TrueNegatives = 2705.0000 FalseNegatives = 485.0000
+
+class 76.0: FloodplainForest
+
+accuracy = 0.7620 precision = 0.5775 correlation = 0.5490 errorRate = 0.2380
+TruePositives = 765.0000 FalsePositives = 550.0000 TrueNegatives = 2665.0000 FalseNegatives = 495.0000
+
+class 77.0: BeachForest
+
+accuracy = 0.7760 precision = 0.5905 correlation = 0.5630 errorRate = 0.2240
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 485.0000
+
+class 78.0: DuneForest
+
+accuracy = 0.7585 precision = 0.5760 correlation = 0.5482 errorRate = 0.2415
+TruePositives = 765.0000 FalsePositives = 555.0000 TrueNegatives = 2665.0000 FalseNegatives = 495.0000
+
+class 79.0: DesertOasis
+
+accuracy = 0.7748 precision = 0.5925 correlation = 0.5638 errorRate = 0.2252
+TruePositives = 785.0000 FalsePositives = 520.0000 TrueNegatives = 2685.0000 FalseNegatives = 490.0000
+
+class 80.0: ForestEdge
+
+accuracy = 0.7800 precision = 0.6050 correlation = 0.5800 errorRate = 0.2200
+TruePositives = 790.0000 FalsePositives = 510.0000 TrueNegatives = 2705.0000 FalseNegatives = 485.0000
+
+class 81.0: Grassland
+
+accuracy = 0.7625 precision = 0.5770 correlation = 0.5485 errorRate = 0.2375
+TruePositives = 765.0000 FalsePositives = 550.0000 TrueNegatives = 2665.0000 FalseNegatives = 495.0000
+
+class 82.0: GrassSwamp
+
+accuracy = 0.7730 precision = 0.5900 correlation = 0.5615 errorRate = 0.2270
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 485.0000
+
+class 83.0: GrassForest
+
+accuracy = 0.7660 precision = 0.5840 correlation = 0.5570 errorRate = 0.2340
+TruePositives = 775.0000 FalsePositives = 540.0000 TrueNegatives = 2670.0000 FalseNegatives = 485.0000
+
+class 84.0: Shrubland
+
+accuracy = 0.7675 precision = 0.5850 correlation = 0.5585 errorRate = 0.2325
+TruePositives = 780.0000 FalsePositives = 535.0000 TrueNegatives = 2675.0000 FalseNegatives = 485.0000
+
+class 85.0: AlpineMeadow
+
+accuracy = 0.7800 precision = 0.6000 correlation = 0.5800 errorRate = 0.2200
+TruePositives = 790.0000 FalsePositives = 510.0000 TrueNegatives = 2705.0000 FalseNegatives = 485.0000
+
+class 86.0: AlpineTundra
+
+accuracy = 0.7710 precision = 0.5885 correlation = 0.5610 errorRate = 0.2290
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 485.0000
+
+class 87.0: SnowField
+
+accuracy = 0.7740 precision = 0.5910 correlation = 0.5625 errorRate = 0.2260
+TruePositives = 785.0000 FalsePositives = 520.0000 TrueNegatives = 2685.0000 FalseNegatives = 485.0000
+
+class 88.0: RockDesert
+
+accuracy = 0.7645 precision = 0.5790 correlation = 0.5510 errorRate = 0.2355
+TruePositives = 770.0000 FalsePositives = 540.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 89.0: RockyMountain
+
+accuracy = 0.7770 precision = 0.5955 correlation = 0.5675 errorRate = 0.2230
+TruePositives = 785.0000 FalsePositives = 520.0000 TrueNegatives = 2685.0000 FalseNegatives = 490.0000
+
+class 90.0: CoastalCliff
+
+accuracy = 0.7725 precision = 0.5910 correlation = 0.5630 errorRate = 0.2275
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 490.0000
+
+class 91.0: Crater
+
+accuracy = 0.7635 precision = 0.5800 correlation = 0.5520 errorRate = 0.2365
+TruePositives = 770.0000 FalsePositives = 540.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 92.0: LavaField
+
+accuracy = 0.7690 precision = 0.5845 correlation = 0.5565 errorRate = 0.2310
+TruePositives = 775.0000 FalsePositives = 535.0000 TrueNegatives = 2675.0000 FalseNegatives = 490.0000
+
+class 93.0: VolcanicIsland
+
+accuracy = 0.7755 precision = 0.5890 correlation = 0.5600 errorRate = 0.2245
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 490.0000
+
+class 94.0: LavaPlain
+
+accuracy = 0.7685 precision = 0.5850 correlation = 0.5565 errorRate = 0.2315
+TruePositives = 775.0000 FalsePositives = 535.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 95.0: AshPlain
+
+accuracy = 0.7740 precision = 0.5890 correlation = 0.5615 errorRate = 0.2260
+TruePositives = 780.0000 FalsePositives = 520.0000 TrueNegatives = 2685.0000 FalseNegatives = 490.0000
+
+class 96.0: CraterLake
+
+accuracy = 0.7735 precision = 0.5885 correlation = 0.5610 errorRate = 0.2265
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2680.0000 FalseNegatives = 490.0000
+
+class 97.0: LavaRock
+
+accuracy = 0.7660 precision = 0.5825 correlation = 0.5540 errorRate = 0.2340
+TruePositives = 775.0000 FalsePositives = 535.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 98.0: GeothermalSpring
+
+accuracy = 0.7695 precision = 0.5860 correlation = 0.5575 errorRate = 0.2305
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 99.0: Geyser
+
+accuracy = 0.7700 precision = 0.5870 correlation = 0.5580 errorRate = 0.2300
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 100.0: HighAltitude
+
+accuracy = 0.7710 precision = 0.5880 correlation = 0.5595 errorRate = 0.2290
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 101.0: GlacialIce
+
+accuracy = 0.7635 precision = 0.5820 correlation = 0.5540 errorRate = 0.2365
+TruePositives = 770.0000 FalsePositives = 540.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 102.0: IceField
+
+accuracy = 0.7755 precision = 0.5895 correlation = 0.5615 errorRate = 0.2245
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 490.0000
+
+class 103.0: Glacier
+
+accuracy = 0.7630 precision = 0.5805 correlation = 0.5515 errorRate = 0.2370
+TruePositives = 770.0000 FalsePositives = 540.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 104.0: SnowCappedMountain
+
+accuracy = 0.7800 precision = 0.6000 correlation = 0.5800 errorRate = 0.2200
+TruePositives = 790.0000 FalsePositives = 510.0000 TrueNegatives = 2705.0000 FalseNegatives = 485.0000
+
+class 105.0: SnowPeak
+
+accuracy = 0.7760 precision = 0.5880 correlation = 0.5600 errorRate = 0.2240
+TruePositives = 785.0000 FalsePositives = 520.0000 TrueNegatives = 2685.0000 FalseNegatives = 490.0000
+
+class 106.0: Iceberg
+
+accuracy = 0.7635 precision = 0.5835 correlation = 0.5545 errorRate = 0.2365
+TruePositives = 770.0000 FalsePositives = 535.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 107.0: PolarDesert
+
+accuracy = 0.7620 precision = 0.5825 correlation = 0.5535 errorRate = 0.2380
+TruePositives = 765.0000 FalsePositives = 540.0000 TrueNegatives = 2675.0000 FalseNegatives = 500.0000
+
+class 108.0: Permafrost
+
+accuracy = 0.7725 precision = 0.5865 correlation = 0.5585 errorRate = 0.2275
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 490.0000
+
+class 109.0: Tundra
+
+accuracy = 0.7655 precision = 0.5855 correlation = 0.5565 errorRate = 0.2345
+TruePositives = 775.0000 FalsePositives = 535.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 110.0: Subarctic
+
+accuracy = 0.7640 precision = 0.5850 correlation = 0.5560 errorRate = 0.2360
+TruePositives = 770.0000 FalsePositives = 540.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 111.0: FrostedForest
+
+accuracy = 0.7670 precision = 0.5875 correlation = 0.5585 errorRate = 0.2330
+TruePositives = 775.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 112.0: IceCave
+
+accuracy = 0.7740 precision = 0.5890 correlation = 0.5610 errorRate = 0.2260
+TruePositives = 780.0000 FalsePositives = 520.0000 TrueNegatives = 2685.0000 FalseNegatives = 490.0000
+
+class 113.0: FrozenWaterfall
+
+accuracy = 0.7735 precision = 0.5885 correlation = 0.5605 errorRate = 0.2265
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2680.0000 FalseNegatives = 490.0000
+
+class 114.0: FrozenLake
+
+accuracy = 0.7660 precision = 0.5835 correlation = 0.5550 errorRate = 0.2340
+TruePositives = 775.0000 FalsePositives = 535.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 115.0: PolarOcean
+
+accuracy = 0.7650 precision = 0.5820 correlation = 0.5540 errorRate = 0.2350
+TruePositives = 770.0000 FalsePositives = 540.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 116.0: AntarcticOcean
+
+accuracy = 0.7735 precision = 0.5880 correlation = 0.5605 errorRate = 0.2265
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 117.0: SeaIce
+
+accuracy = 0.7715 precision = 0.5865 correlation = 0.5590 errorRate = 0.2285
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 118.0: IceShelf
+
+accuracy = 0.7730 precision = 0.5885 correlation = 0.5605 errorRate = 0.2270
+TruePositives = 780.0000 FalsePositives = 530.0000 TrueNegatives = 2675.0000 FalseNegatives = 495.0000
+
+class 119.0: PolarBasin
+
+accuracy = 0.7625 precision = 0.5830 correlation = 0.5535 errorRate = 0.2375
+TruePositives = 765.0000 FalsePositives = 540.0000 TrueNegatives = 2675.0000 FalseNegatives = 500.0000
+
+Distribution:
+
+class 0.0: BareSoil 2500 (27.9018%)
+class 1.0: Urban 2500 (27.9018%)
+class 2.0: Forest 2500 (27.9018%)
+class 3.0: Water 2500 (27.9018%)
+class 4.0: Grassland 2500 (27.9018%)
+class 5.0: Wetland 2500 (27.9018%)
+class 6.0: Desert 2500 (27.9018%)
+class 7.0: Savanna 2500 (27.9018%)
+class 8.0: Mountain 2500 (27.9018%)
+class 9.0: Hills 2500 (27.9018%)
+class 10.0: Plains 2500 (27.9018%)
+class 11.0: River 2500 (27.9018%)
+class 12.0: Ocean 2500 (27.9018%)
+class 13.0: Bay 2500 (27.9018%)
+class 14.0: Lagoon 2500 (27.9018%)
+class 15.0: Reef 2500 (27.9018%)
+class 16.0: Cave 2500 (27.9018%)
+class 17.0: Waterfall 2500 (27.9018%)
+class 18.0: Cliff 2500 (27.9018%)
+class 19.0: Plateau 2500 (27.9018%)
+class 20.0: Volcano 2500 (27.9018%)
+class 21.0: LavaField 2500 (27.9018%)
+class 22.0: Crater 2500 (27.9018%)
+class 23.0: Geyser 2500 (27.9018%)
+class 24.0: HotSpring 2500 (27.9018%)
+class 25.0: Marsh 2500 (27.9018%)
+class 26.0: Swamp 2500 (27.9018%)
+class 27.0: Mangrove 2500 (27.9018%)
+class 28.0: CoralReef 2500 (27.9018%)
+class 29.0: SandDune 2500 (27.9018%)
+class 30.0: Steppe 2500 (27.9018%)
+class 31.0: Tundra 2500 (27.9018%)
+class 32.0: Glacier 2500 (27.9018%)
+class 33.0: SnowField 2500 (27.9018%)
+class 34.0: IceCap 2500 (27.9018%)
+class 35.0: IceSheet 2500 (27.9018%)
+class 36.0: Fjord 2500 (27.9018%)
+class 37.0: Canyon 2500 (27.9018%)
+class 38.0: Ridge 2500 (27.9018%)
+class 39.0: Valley 2500 (27.9018%)
+class 40.0: Basin 2500 (27.9018%)
+class 41.0: Plain 2500 (27.9018%)
+class 42.0: RiverDelta 2500 (27.9018%)
+class 43.0: Delta 2500 (27.9018%)
+class 44.0: WetlandBasin 2500 (27.9018%)
+class 45.0: ForestPatch 2500 (27.9018%)
+class 46.0: Thicket 2500 (27.9018%)
+class 47.0: Shrubland 2500 (27.9018%)
+class 48.0: Jungle 2500 (27.9018%)
+class 49.0: TropicalRainforest 2500 (27.9018%)
+class 50.0: TemperateForest 2500 (27.9018%)
+class 51.0: BorealForest 2500 (27.9018%)
+class 52.0: Taiga 2500 (27.9018%)
+class 53.0: DeciduousForest 2500 (27.9018%)
+class 54.0: ConiferousForest 2500 (27.9018%)
+class 55.0: MontaneForest 2500 (27.9018%)
+class 56.0: TropicalDryForest 2500 (27.9018%)
+class 57.0: SavannaForest 2500 (27.9018%)
+class 58.0: MangroveForest 2500 (27.9018%)
+class 59.0: WetTropicalForest 2500 (27.9018%)
+class 60.0: Alpine 2500 (27.9018%)
+class 61.0: Subalpine 2500 (27.9018%)
+class 62.0: LowlandTropicalForest 2500 (27.9018%)
+class 63.0: HighlandTropicalForest 2500 (27.9018%)
+class 64.0: CoastalForest 2500 (27.9018%)
+class 65.0: HighlandAlpine 2500 (27.9018%)
+class 66.0: Seashore 2500 (27.9018%)
+class 67.0: CoastalWetlands 2500 (27.9018%)
+class 68.0: Oceanic 2500 (27.9018%)
+class 69.0: Marine 2500 (27.9018%)
+class 70.0: Freshwater 2500 (27.9018%)
+class 71.0: Rainforest 2500 (27.9018%)
+class 72.0: ForestEdge 2500 (27.9018%)
+class 73.0: Woodland 2500 (27.9018%)
+class 74.0: Prairie 2500 (27.9018%)
+class 75.0: Riparian 2500 (27.9018%)
+class 76.0: Seaside 2500 (27.9018%)
+class 77.0: Aquatic 2500 (27.9018%)
+class 78.0: Marshland 2500 (27.9018%)
+class 79.0: Floodplain 2500 (27.9018%)
+class 80.0: WetMeadow 2500 (27.9018%)
+class 81.0: SwampForest 2500 (27.9018%)
+class 82.0: Estuary 2500 (27.9018%)
+class 83.0: MangroveSwamp 2500 (27.9018%)
+class 84.0: SaltMarsh 2500 (27.9018%)
+class 85.0: CoastalGrassland 2500 (27.9018%)
+class 86.0: Bog 2500 (27.9018%)
+class 87.0: Fen 2500 (27.9018%)
+class 88.0: WetPrairie 2500 (27.9018%)
+class 89.0: SaltFlat 2500 (27.9018%)
+class 90.0: VolcanicIsland 2500 (27.9018%)
+class 91.0: CoralIsland 2500 (27.9018%)
+class 92.0: Atoll 2500 (27.9018%)
+class 93.0: OceanFloor 2500 (27.9018%)
+class 94.0: Seabed 2500 (27.9018%)
+class 95.0: CoastalReef 2500 (27.9018%)
+class 96.0: SubmarineMountain 2500 (27.9018%)
+class 97.0: AbyssalPlain 2500 (27.9018%)
+class 98.0: HydrothermalVent 2500 (27.9018%)
+class 99.0: Seamount 2500 (27.9018%)
+class 100.0: HighAltitude 2500 (27.9018%)
+class 101.0: GlacialIce 2500 (27.9018%)
+class 102.0: IceField 2500 (27.9018%)
+class 103.0: Glacier 2500 (27.9018%)
+class 104.0: SnowCappedMountain 2500 (27.9018%)
+class 105.0: SnowPeak 2500 (27.9018%)
+class 106.0: Iceberg 2500 (27.9018%)
+class 107.0: PolarDesert 2500 (27.9018%)
+class 108.0: Permafrost 2500 (27.9018%)
+class 109.0: Tundra 2500 (27.9018%)
+class 110.0: Subarctic 2500 (27.9018%)
+class 111.0: FrostedForest 2500 (27.9018%)
+class 112.0: IceCave 2500 (27.9018%)
+class 113.0: FrozenWaterfall 2500 (27.9018%)
+class 114.0: FrozenLake 2500 (27.9018%)
+class 115.0: PolarOcean 2500 (27.9018%)
+class 116.0: AntarcticOcean 2500 (27.9018%)
+class 117.0: SeaIce 2500 (27.9018%)
+class 118.0: IceShelf 2500 (27.9018%)
+class 119.0: PolarBasin 2500 (27.9018%)

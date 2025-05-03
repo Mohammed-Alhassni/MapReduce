@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class BuildDataset {
-	String samplePath = "/Users/mohmmedmsoud/Desktop/sem2 temp/pds project/SAMPLE.txt";
+	String samplePath = "/Users/mohmmedmsoud/Desktop/sem2 temp/pds project/SAMPLE2.txt";
 	String outputPath = "/Users/mohmmedmsoud/Desktop/sem2 temp/pds project/Dataset.csv";
 	
 	public static void main(String[] args) throws InterruptedException, IOException {

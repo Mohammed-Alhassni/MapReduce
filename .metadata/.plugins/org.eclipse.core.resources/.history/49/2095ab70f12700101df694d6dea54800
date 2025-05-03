@@ -10,9 +10,8 @@ public class Reducer {
     private static final Object lock = new Object();  // Lock object to synchronize file writing
 
     public static void reduce(Map<String, Object> classAndFeatures) throws FileNotFoundException, IOException {
-    	BuildDataset MainClass= new BuildDataset();
-
-    	File file = new File(MainClass.outputPath);
+    	String outputPath = "/Users/mohmmedmsoud/Desktop/sem2 temp/pds project/Dataset.csv";
+    	File file = new File(outputPath);
         String className = null;
 
         // Get the class name and features map from the input

@@ -2,15 +2,12 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class BuildDataset {
-	String samplePath = "/Users/mohmmedmsoud/Desktop/sem2 temp/pds project/SAMPLE.txt";
-	String outputPath = "/Users/mohmmedmsoud/Desktop/sem2 temp/pds project/Dataset.csv";
-	
 	public static void main(String[] args) throws InterruptedException, IOException {
-		BuildDataset MainClass= new BuildDataset();
+	    String samplePath = "/Users/mohmmedmsoud/Desktop/sem2 temp/pds project/SAMPLE.txt";
 
 	    long startNs = System.nanoTime();
 
-	    BlocksExtractor.extractBlocks(MainClass.samplePath);
+	    BlocksExtractor.extractBlocks(samplePath);
 
 	    long durationMs = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNs);
 	    System.out.println("Done, took " + durationMs + "ms");
