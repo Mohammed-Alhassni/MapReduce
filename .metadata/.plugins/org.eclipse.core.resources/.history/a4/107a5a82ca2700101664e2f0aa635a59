@@ -1,0 +1,72 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class BlocksExtractor {
+
+    public static ArrayList<ArrayList<String>> extractBlocks(String samplePath) throws IOException {
+        ArrayList<String> allLines = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(samplePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (!line.trim().isEmpty()) {
+                    allLines.add(line);
+                }
+            }
+        }
+
+        ArrayList<ArrayList<String>> allBlocks = new ArrayList<>();
+        ArrayList<ArrayList<String>> classBlocks = new ArrayList<>();
+        ArrayList<String> currentBlock = new ArrayList<>();
+
+        // Step 1: Extract all class blocks
+        for (int i = 0; i < allLines.size(); i++) {
+            String line = allLines.get(i);
+
+            if (line.matches("^class \\d+\\.\\d+: \\w+$") || line.matches("^class \\d+\\.\\d+: \\w+ \\d+ \\(\\d+\\.\\d+%\\)$")) {
+                if (!currentBlock.isEmpty()) {
+                    classBlocks.add(new ArrayList<>(currentBlock));
+                    currentBlock.clear();
+                }
+                currentBlock.add(line);
+            } else if (!currentBlock.isEmpty()) {
+                currentBlock.add(line);
+            }
+        }
+
+        if (!currentBlock.isEmpty()) {
+            classBlocks.add(new ArrayList<>(currentBlock)); // add the last block
+        }
+
+        // Step 2: Extract distribution lines
+        ArrayList<String> distributionLines = new ArrayList<>();
+        for (String line : allLines) {
+            if (line.contains("Distribution:")) {
+                distributionLines.add(line);
+            }
+        }
+
+        // Step 3: Process in chunks of 10
+        int totalBlocks = Math.min(classBlocks.size(), distributionLines.size());
+        for (int i = 0; i < totalBlocks; i += 10) {
+            int end = Math.min(i + 10, totalBlocks);
+
+            for (int j = i; j < end; j++) {
+                ArrayList<String> block = new ArrayList<>(classBlocks.get(j));
+                String classLine = classBlocks.get(j).get(0); // first line of the block
+
+                for (String dist : distributionLines) {
+                    if (dist.contains(classLine)) {
+                        block.add(dist);
+                        break;
+                    }
+                }
+
+                allBlocks.add(block);
+            }
+        }
+
+        return allBlocks;
+    }
+}

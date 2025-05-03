@@ -1,0 +1,6 @@
+
+public class Mapper {
+	public static void Mapper(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+}

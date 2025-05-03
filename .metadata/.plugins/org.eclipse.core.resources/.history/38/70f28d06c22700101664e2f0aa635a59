@@ -1,0 +1,115 @@
+import java.io.*;
+import java.nio.file.Files;
+import java.util.*;
+import java.util.concurrent.*;
+
+public class MyMT {
+
+    private static final String SAMPLE_PATH = "SAMPLE3.txt";
+    private static final String OUTPUT_PATH = "output.csv";
+    private static final Object fileLock = new Object(); // for thread-safe writing
+
+    public static void main(String[] args) throws IOException, InterruptedException {
+        List<List<String>> classBlocks = extractClassBlocks(SAMPLE_PATH);
+
+        ExecutorService executor = Executors.newFixedThreadPool(4); // Use 4 threads
+
+        for (List<String> block : classBlocks) {
+            executor.submit(() -> {
+                try {
+                    Map<String, Object> result = MapperFun(block);
+                    ReducerFun(result);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+        }
+
+        executor.shutdown();
+        executor.awaitTermination(10, TimeUnit.MINUTES);
+
+        System.out.println("Done!");
+    }
+
+    private static List<List<String>> extractClassBlocks(String path) throws IOException {
+        List<List<String>> classBlocks = new ArrayList<>();
+        List<String> currentBlock = new ArrayList<>();
+        boolean isDistribution = false;
+
+        List<String> allLines = Files.readAllLines(new File(path).toPath());
+
+        for (int i = 0; i < allLines.size(); i++) {
+            String line = allLines.get(i).trim();
+
+            if (line.isEmpty()) continue;
+
+            if (line.startsWith("class ") && !currentBlock.isEmpty()) {
+                // Try to find distribution line
+                for (int j = i; j < allLines.size(); j++) {
+                    String potential = allLines.get(j);
+                    if (potential.contains("Distribution:") && potential.contains(currentBlock.get(0))) {
+                        currentBlock.add(potential);
+                        break;
+                    }
+                }
+                classBlocks.add(currentBlock);
+                currentBlock = new ArrayList<>();
+            }
+
+            currentBlock.add(line);
+        }
+
+        return classBlocks;
+    }
+
+    public static Map<String, Object> MapperFun(List<String> Data) {
+        Map<String, Object> classAndFeatures = new HashMap<>();
+        Map<String, String> featuresMap = new HashMap<>();
+        List<String> words = new ArrayList<>();
+
+        for (String line : Data) {
+            String[] split = line.split("\\s+");
+            words.addAll(Arrays.asList(split));
+        }
+
+        int i = 0;
+        while (i < words.size()) {
+            if ("=".equals(words.get(i))) {
+                featuresMap.put(words.get(i - 1), words.get(i + 1));
+            }
+            i++;
+        }
+
+        featuresMap.put("Samples", words.get(words.size() - 2));
+        featuresMap.put("Percentage", words.get(words.size() - 1).replace(")", "").replace("(", ""));
+        classAndFeatures.put(words.get(3), featuresMap);
+
+        return classAndFeatures;
+    }
+
+    public static void ReducerFun(Map<String, Object> classAndFeatures) throws IOException {
+        String className = classAndFeatures.keySet().iterator().next();
+        Map<String, String> featuresMap = (Map<String, String>) classAndFeatures.get(className);
+
+        synchronized (fileLock) {
+            File file = new File(OUTPUT_PATH);
+            boolean writeHeader = !file.exists();
+
+            try (FileWriter writer = new FileWriter(file, true)) {
+                if (writeHeader) {
+                    writer.write("class");
+                    for (String key : featuresMap.keySet()) {
+                        writer.write("," + key);
+                    }
+                    writer.write("\n");
+                }
+
+                writer.write(className);
+                for (String key : featuresMap.keySet()) {
+                    writer.write("," + featuresMap.get(key));
+                }
+                writer.write("\n");
+            }
+        }
+    }
+}

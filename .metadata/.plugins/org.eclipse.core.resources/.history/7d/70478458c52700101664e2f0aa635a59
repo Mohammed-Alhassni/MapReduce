@@ -1,0 +1,20 @@
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+public class MapReduce {
+	public static void main(String[] args) throws InterruptedException, IOException {
+	    String samplePath = "/Users/mohmmedmsoud/Desktop/sem2 temp/pds project/SAMPLE3.txt";
+
+	    long startNs = System.nanoTime();
+
+	    ArrayList<ArrayList<String>> blocks = BlocksExtractor.extractBlocks(samplePath);
+
+	    for (ArrayList<String> block : blocks) {
+	    	Mapper.map(block); // your existing processing function
+	    }
+
+	    long durationMs = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNs);
+	    System.out.println("Done, took " + durationMs + "ms");
+	}
+}

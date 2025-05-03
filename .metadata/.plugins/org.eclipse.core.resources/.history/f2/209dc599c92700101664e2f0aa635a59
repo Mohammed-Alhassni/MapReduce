@@ -1,0 +1,39 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class BlocksExtractor {
+
+    public static ArrayList<ArrayList<String>> extractBlocks(String samplePath) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(samplePath));
+        ArrayList<ArrayList<String>> allBlocks = new ArrayList<>();
+        ArrayList<String> currentBlock = null;
+        String line;
+        boolean isReadingBlock = false;
+
+        while ((line = reader.readLine()) != null) {
+            line = line.trim();
+            if (line.isEmpty()) continue;
+
+            if (line.matches("^class \\d+\\.\\d+: \\w+$")) {
+                // Start a new block
+                currentBlock = new ArrayList<>();
+                currentBlock.add(line);
+                isReadingBlock = true;
+            } else if (isReadingBlock) {
+                currentBlock.add(line);
+
+                if (line.contains("Distribution:") && currentBlock.size() > 1) {
+                    // End of current block when Distribution: line found
+                    allBlocks.add(currentBlock);
+                    currentBlock = null;
+                    isReadingBlock = false;
+                }
+            }
+        }
+
+        reader.close();
+        return allBlocks;
+    }
+}

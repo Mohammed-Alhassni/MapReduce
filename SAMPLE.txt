@@ -1,0 +1,25 @@
+Cross Validation
+Number of classes = 4
+
+class 0.0: BareSoil
+accuracy = 0.7330 precision = 0.5189 correlation = 0.5324 errorRate = 0.2670
+TruePositives = 740.0000 FalsePositives = 686.0000 TrueNegatives = 2544.0000 FalseNegatives = 510.0000
+
+class 1.0: Urban
+accuracy = 0.7799 precision = 0.6000 correlation = 0.5804 errorRate = 0.2201
+TruePositives = 792.0000 FalsePositives = 528.0000 TrueNegatives = 2702.0000 FalseNegatives = 458.0000
+
+class 2.0: Forest
+accuracy = 0.7923 precision = 0.6342 correlation = 0.6002 errorRate = 0.2077
+TruePositives = 803.0000 FalsePositives = 460.0000 TrueNegatives = 2755.0000 FalseNegatives = 438.0000
+
+class 3.0: Water
+accuracy = 0.8095 precision = 0.6489 correlation = 0.6154 errorRate = 0.1905
+TruePositives = 820.0000 FalsePositives = 442.0000 TrueNegatives = 2785.0000 FalseNegatives = 385.0000
+
+Distribution:
+
+class 0.0: BareSoil 2500 (27.9018%)
+class 1.0: Urban 2500 (27.9018%)
+class 2.0: Forest 2500 (27.9018%)
+class 3.0: Water 2500 (27.9018%)

@@ -1,0 +1,55 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class BlocksExtractor {
+	 private static List<List<String>> extractClassBlocks(String path) throws IOException {
+    String line;
+    ArrayList<String> TempData= new  ArrayList<>();
+    Boolean isForDistrubtion= false;
+
+    while ((line = reader.readLine()) !=  null) {
+    	if (!line.replace(" ", "").equals("")) {
+    		
+
+    		
+    		if (line.contains("class ") && !(TempData.isEmpty())) {
+    			 BufferedReader distrubutionReader = new BufferedReader(new FileReader(samplePath));
+    			 String dirtrubtionLine;
+    			 while ((dirtrubtionLine = distrubutionReader.readLine()) !=  null) {
+    				 	    				 
+    			    	if (!dirtrubtionLine.replace(" ", "").equals("") && dirtrubtionLine.contains("Distribution:")) {	    			    		
+    			    		isForDistrubtion= true;	    			    				
+    			    	}
+    			    	
+    			    	if (isForDistrubtion && dirtrubtionLine.contains(TempData.get(0))) {
+			    			TempData.add(dirtrubtionLine);
+			    			//System.out.println(TempData + "\n");
+			    			MapperFun(TempData);
+			    			TempData= new  ArrayList<>();
+			    			isForDistrubtion= false;
+			    			break;
+			    		}
+    			    	
+    			 } 
+    			 distrubutionReader.close();
+    			 
+    			 if (!line.matches("^class \\d+\\.\\d+: \\w+ \\d+ \\(\\d+\\.\\d+%\\)$")) {
+    				 TempData.add(line);	
+    			 }
+    			 
+    			 
+    					
+    		} else if ((line.matches("^class \\d+\\.\\d+: \\w+$")) && (TempData.isEmpty())) {
+    			TempData.add(line);
+    		} else if (!TempData.isEmpty()) {
+    			TempData.add(line);
+    		}   		
+    	}
+    }  
+    
+    
+	 }
+}
