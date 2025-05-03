@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Mapper {
 
-    public static void map(ArrayList<String> data) throws FileNotFoundException, IOException {
+    public static Map<String, Object> map(ArrayList<String> data) throws FileNotFoundException, IOException {
         Map<String, Object> classAndFeatures = new HashMap<>();
         Map<String, String> featuresMap = new HashMap<>();
         ArrayList<String> words = new ArrayList<>();
@@ -18,7 +18,7 @@ public class Mapper {
             }
         }
 
-//        System.out.println(words);
+        System.out.println(words);
 
         for (int i = 0; i < words.size(); i++) {
             if (words.get(i).replace(" ", "").equals("=")) {
@@ -30,10 +30,10 @@ public class Mapper {
         featuresMap.put("Percentage", words.get(words.size() - 1).replace(")", "").replace("(", ""));
         classAndFeatures.put(words.get(3), featuresMap);
 
-//        System.out.println(featuresMap);
-//        System.out.println(classAndFeatures + "\n");
+        System.out.println(featuresMap);
+        System.out.println(classAndFeatures + "\n");
 
-        Reducer.reduce(classAndFeatures);
+        return classAndFeatures;
     }
 }
 

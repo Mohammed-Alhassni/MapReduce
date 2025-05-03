@@ -1,5 +1,0 @@
-class,FalsePositives,correlation,TrueNegatives,FalseNegatives,Percentage,Samples,precision,TruePositives,accuracy,errorRate
-BareSoil,686,0.5324,2544,510,27.9018%,2500,0.5189,740,0.7330,0.2670
-Urban,528,0.5804,2702,458,27.9018%,2500,0.6000,792,0.7799,0.2201
-Forest,460,0.6002,2755,438,27.9018%,2500,0.6342,803,0.7923,0.2077
-Water,442,0.6154,2785,385,27.9018%,2500,0.6489,820,0.8095,0.1905

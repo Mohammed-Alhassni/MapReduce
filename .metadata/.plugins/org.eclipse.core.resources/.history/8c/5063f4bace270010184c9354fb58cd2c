@@ -42,7 +42,7 @@ public class MapperTesting {
 	    			    	
 	    			    	if (isForDistrubtion && dirtrubtionLine.contains(TempData.get(0))) {
     			    			TempData.add(dirtrubtionLine);
-//    			    			System.out.println(TempData + "\n");
+    			    			//System.out.println(TempData + "\n");
     			    			MapperFun(TempData);
     			    			TempData= new  ArrayList<>();
     			    			isForDistrubtion= false;

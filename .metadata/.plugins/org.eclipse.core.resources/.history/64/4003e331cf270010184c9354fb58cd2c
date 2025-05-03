@@ -7,6 +7,7 @@ public class BlocksExtractor {
 
     public static void extractBlocks(String samplePath) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(samplePath));
+        ArrayList<ArrayList<String>> allBlocks = new ArrayList<>();
         ArrayList<String> TempData = new ArrayList<>();
         String line;
         boolean isForDistrubtion = false;

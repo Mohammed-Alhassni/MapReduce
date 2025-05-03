@@ -5,8 +5,9 @@ import java.util.ArrayList;
 
 public class BlocksExtractor {
 
-    public static void extractBlocks(String samplePath) throws IOException {
+    public static ArrayList<ArrayList<String>> extractBlocks(String samplePath) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(samplePath));
+        ArrayList<ArrayList<String>> allBlocks = new ArrayList<>();
         ArrayList<String> TempData = new ArrayList<>();
         String line;
         boolean isForDistrubtion = false;
@@ -25,7 +26,7 @@ public class BlocksExtractor {
 
                         if (isForDistrubtion && dirtrubtionLine.contains(TempData.get(0))) {
                             TempData.add(dirtrubtionLine);
-                            Mapper.map(TempData);
+                            allBlocks.add(new ArrayList<>(TempData)); // Save the block
                             TempData.clear();
                             isForDistrubtion = false;
                             break;
@@ -47,5 +48,6 @@ public class BlocksExtractor {
         }
 
         reader.close();
+        return allBlocks;
     }
 }
