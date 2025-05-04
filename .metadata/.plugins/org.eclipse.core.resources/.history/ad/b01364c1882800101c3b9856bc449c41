@@ -1,0 +1,35 @@
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+import com.opencsv.exceptions.CsvValidationException;
+
+public class BuildDataset {
+    private String samplePath;
+    private String csvPath;
+    private String jsonPath;
+
+    public BuildDataset(String samplePath, String csvPath, String jsonPath) {
+        this.samplePath = samplePath;
+        this.csvPath = csvPath;
+        this.jsonPath = jsonPath;
+    }
+
+    public void generateDataset() throws InterruptedException, IOException, CsvValidationException {
+        long startNs = System.nanoTime();
+
+        // Extract blocks from sample file
+        BlocksExtractor.extractBlocks(this.samplePath);  // Assuming this method processes the sample file
+        
+        // Convert CSV to JSON
+        JsonBuilder.convertCSVToJSON();  // Assuming this method handles the conversion
+
+        long durationMs = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNs);
+        System.out.println("Done, took " + durationMs + "ms");
+    }
+
+    public static void main(String[] args) throws InterruptedException, IOException, CsvValidationException {
+        // Example of how you could call it with a sample path
+        BuildDataset buildDataset = new BuildDataset("sample.txt", "dataset.csv", "dataset.json");
+        buildDataset.generateDataset();
+    }
+}
+

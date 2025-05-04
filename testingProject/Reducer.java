@@ -12,7 +12,7 @@ public class Reducer {
     public static void reduce(Map<String, Object> classAndFeatures) throws FileNotFoundException, IOException {
     	BuildDataset MainClass= new BuildDataset();
 
-    	File file = new File(MainClass.outputPath);
+    	File file = new File(MainClass.csvPath);
         String className = null;
 
         // Get the class name and features map from the input

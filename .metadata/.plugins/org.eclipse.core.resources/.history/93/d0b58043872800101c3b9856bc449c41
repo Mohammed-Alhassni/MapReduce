@@ -1,0 +1,27 @@
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.io.*;
+import java.util.*;
+
+public class CSVViewer {
+    // Method to read the CSV file and return the data as a 2D array
+    public static String[][] readCSV(String filePath) {
+        List<String[]> dataList = new ArrayList<>();
+        
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            
+            // Read each line from the file
+            while ((line = br.readLine()) != null) {
+                // Split the line by commas and add it to the data list
+                String[] data = line.split(",");
+                dataList.add(data);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        // Convert the list to a 2D array
+        return dataList.toArray(new String[0][0]);
+    }
+}

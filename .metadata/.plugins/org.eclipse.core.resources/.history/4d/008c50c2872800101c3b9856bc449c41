@@ -1,0 +1,123 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+import com.opencsv.exceptions.CsvValidationException;
+
+public class BuildDatasetUI {
+    private JFrame frame;
+    private JTextField samplePathField;
+    private JTextField csvPathField;
+    private JTextField jsonPathField;
+
+    public BuildDatasetGUI() {
+        frame = new JFrame("Dataset Builder");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 300);
+        frame.setLayout(new GridLayout(5, 2, 10, 10));
+
+        // Sample file path
+        JLabel sampleLabel = new JLabel("Sample File Path:");
+        samplePathField = new JTextField();
+        JButton sampleButton = new JButton("Select File");
+        sampleButton.addActionListener(e -> selectSampleFile());
+        
+        // CSV output path
+        JLabel csvLabel = new JLabel("CSV Output Path:");
+        csvPathField = new JTextField();
+        JButton csvButton = new JButton("Select File");
+        csvButton.addActionListener(e -> selectCSVFile());
+
+        // JSON output path
+        JLabel jsonLabel = new JLabel("JSON Output Path:");
+        jsonPathField = new JTextField();
+        JButton jsonButton = new JButton("Select File");
+        jsonButton.addActionListener(e -> selectJSONFile());
+
+        // Process Button
+        JButton processButton = new JButton("Process");
+        processButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    processFiles();
+                } catch (InterruptedException | IOException | CsvValidationException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        // Add components to frame
+        frame.add(sampleLabel);
+        frame.add(samplePathField);
+        frame.add(sampleButton);
+        frame.add(csvLabel);
+        frame.add(csvPathField);
+        frame.add(csvButton);
+        frame.add(jsonLabel);
+        frame.add(jsonPathField);
+        frame.add(jsonButton);
+        frame.add(processButton);
+
+        frame.setVisible(true);
+    }
+
+    private void selectSampleFile() {
+        JFileChooser fileChooser = new JFileChooser();
+        int result = fileChooser.showOpenDialog(frame);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            samplePathField.setText(fileChooser.getSelectedFile().getAbsolutePath());
+        }
+    }
+
+    private void selectCSVFile() {
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Select CSV Output File");
+        fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        int result = fileChooser.showSaveDialog(frame);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            csvPathField.setText(fileChooser.getSelectedFile().getAbsolutePath());
+        }
+    }
+
+    private void selectJSONFile() {
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Select JSON Output File");
+        fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        int result = fileChooser.showSaveDialog(frame);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            jsonPathField.setText(fileChooser.getSelectedFile().getAbsolutePath());
+        }
+    }
+
+    private void processFiles() throws InterruptedException, IOException, CsvValidationException {
+        String samplePath = samplePathField.getText();
+        String csvPath = csvPathField.getText();
+        String jsonPath = jsonPathField.getText();
+        
+        // Ensure all fields are filled
+        if (samplePath.isEmpty() || csvPath.isEmpty() || jsonPath.isEmpty()) {
+            JOptionPane.showMessageDialog(frame, "Please select all paths.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        BuildDataset MainClass = new BuildDataset();
+        MainClass.samplePath = samplePath;
+        MainClass.csvPath = csvPath;
+        MainClass.jsonPath = jsonPath;
+
+        long startNs = System.nanoTime();
+
+        // Call your methods (you'll need to modify them to use the paths provided)
+        BlocksExtractor.extractBlocks(MainClass.samplePath);
+        JsonBuilder.convertCSVToJSON();
+
+        long durationMs = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNs);
+        JOptionPane.showMessageDialog(frame, "Done, took " + durationMs + "ms", "Process Complete", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(BuildDatasetGUI::new);
+    }
+}

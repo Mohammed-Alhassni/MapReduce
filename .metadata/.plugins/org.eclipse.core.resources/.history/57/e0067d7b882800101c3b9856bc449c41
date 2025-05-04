@@ -1,0 +1,95 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.io.File;
+import java.io.IOException;
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.util.concurrent.TimeUnit;
+import com.opencsv.exceptions.CsvValidationException;
+
+public class BuildDatasetGUI extends JFrame {
+    
+    private JTextField samplePathField;
+    private String samplePath;
+    private String csvPath;
+    private String jsonPath;
+
+    public BuildDatasetGUI() {
+        setTitle("Dataset Builder");
+        setLayout(new FlowLayout());
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(400, 200);
+        
+        // Label for the file path
+        JLabel label = new JLabel("Select Sample File:");
+        add(label);
+
+        // Text field to display the sample file path
+        samplePathField = new JTextField(30);
+        samplePathField.setEditable(false);
+        add(samplePathField);
+
+        // Button to open JFileChooser and select file
+        JButton browseButton = new JButton("Browse");
+        browseButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser fileChooser = new JFileChooser();
+                fileChooser.setDialogTitle("Select Sample File");
+                fileChooser.setFileFilter(new FileNameExtensionFilter("Text Files", "txt"));
+
+                int result = fileChooser.showOpenDialog(null);
+                if (result == JFileChooser.APPROVE_OPTION) {
+                    File selectedFile = fileChooser.getSelectedFile();
+                    samplePath = selectedFile.getAbsolutePath();
+                    samplePathField.setText(samplePath);
+                    
+                    // Update the CSV and JSON paths based on the sample file path
+                    csvPath = samplePath.replace(".txt", ".csv");
+                    jsonPath = samplePath.replace(".txt", ".json");
+                }
+            }
+        });
+        add(browseButton);
+
+        // Button to generate CSV and JSON files
+        JButton generateButton = new JButton("Generate Dataset");
+        generateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    generateDataset();
+                } catch (InterruptedException | IOException | CsvValidationException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        add(generateButton);
+        
+        setVisible(true);
+    }
+
+    private void generateDataset() throws InterruptedException, IOException, CsvValidationException {
+        // Pass the samplePath to the BuildDataset logic
+        BuildDataset buildDataset = new BuildDataset(samplePath, csvPath, jsonPath);
+
+        long startNs = System.nanoTime();
+
+        // Perform the extraction and conversion
+        BlocksExtractor.extractBlocks(samplePath);  // You need to implement this method
+        JsonBuilder.convertCSVToJSON();  // You need to implement this method
+
+        long durationMs = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNs);
+        JOptionPane.showMessageDialog(this, "Done, took " + durationMs + "ms");
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new BuildDatasetGUI();
+            }
+        });
+    }
+}
+

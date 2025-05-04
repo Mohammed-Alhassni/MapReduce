@@ -1,0 +1,41 @@
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.*;
+
+public class XlsxBuilder {
+
+    public static void convertCSVToXLSX() {
+        BuildDataset MainClass = new BuildDataset();
+
+        try (
+            BufferedReader br = new BufferedReader(new FileReader(MainClass.csvPath));
+            Workbook workbook = new XSSFWorkbook();
+            FileOutputStream fileOut = new FileOutputStream(MainClass.XlsxPath)
+        ) {
+            Sheet sheet = workbook.createSheet("CSV Data");
+            String line;
+            int rowIndex = 0;
+
+            while ((line = br.readLine()) != null) {
+                // Handle commas inside quotes by using a CSV parser if needed
+                String[] values = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)", -1); // regex handles quoted values
+
+                Row row = sheet.createRow(rowIndex++);
+                for (int i = 0; i < values.length; i++) {
+                    // Strip quotes if needed
+                    String cleanValue = values[i].replaceAll("^\"|\"$", "").trim();
+                    row.createCell(i).setCellValue(cleanValue);
+                }
+            }
+
+            workbook.write(fileOut);
+            System.out.println("✅ Excel file created: " + MainClass.XlsxPath);
+
+        } catch (IOException e) {
+            System.err.println("❌ Error creating Excel file:");
+            e.printStackTrace();
+        }
+    }
+}
+

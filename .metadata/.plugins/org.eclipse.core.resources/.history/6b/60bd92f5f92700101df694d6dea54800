@@ -1,0 +1,31 @@
+
+public class XlsxBuilder {
+    public static void convertCSVToXLSX() {
+        String csvFile = "data.csv";
+        String excelFile = "data.xlsx";
+
+        try (
+            BufferedReader br = new BufferedReader(new FileReader(csvFile));
+            Workbook workbook = new XSSFWorkbook();
+            FileOutputStream fileOut = new FileOutputStream(excelFile)
+        ) {
+            Sheet sheet = workbook.createSheet("CSV Data");
+            String line;
+            int rowIndex = 0;
+
+            while ((line = br.readLine()) != null) {
+                String[] values = line.split(",");
+                Row row = sheet.createRow(rowIndex++);
+                for (int i = 0; i < values.length; i++) {
+                    row.createCell(i).setCellValue(values[i]);
+                }
+            }
+
+            workbook.write(fileOut);
+            System.out.println("✅ Excel file created: " + excelFile);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
