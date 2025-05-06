@@ -15,7 +15,7 @@ import java.util.Set;
 
 public class MapperTesting {
 	public static void main(String[] args) throws InterruptedException, IOException {
-		String samplePath= "/Users/mohmmedmsoud/Desktop/sem2 temp/pds project/SAMPLE2.txt";
+		String samplePath= "/Users/mohmmedmsoud/Desktop/sem2 temp/pds project/SAMPLE.txt";
 	    BufferedReader reader = new BufferedReader(new FileReader(samplePath));
 	    
 
