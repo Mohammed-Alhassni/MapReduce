@@ -1,0 +1,88 @@
+import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+
+public class MainUI {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Dataset Builder");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 300);
+        frame.setLayout(new FlowLayout());
+
+        JButton sampleBtn = new JButton("Choose Sample File");
+        JButton csvBtn = new JButton("Choose CSV Folder");
+        JButton jsonBtn = new JButton("Choose JSON Folder");
+        JButton runBtn = new JButton("Run Builder");
+        JButton viewCSVBtn = new JButton("View CSV");  // ✅ New Button
+        viewCSVBtn.setEnabled(false); // Disable by default
+
+        String[] samplePath = new String[1];
+        String[] csvPath = new String[1];
+        String[] jsonPath = new String[1];
+
+        // Sample File Chooser
+        sampleBtn.addActionListener(e -> {
+            JFileChooser chooser = new JFileChooser();
+            if (chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
+                samplePath[0] = chooser.getSelectedFile().getAbsolutePath();
+            }
+        });
+
+        // CSV Folder Chooser
+        csvBtn.addActionListener(e -> {
+            JFileChooser chooser = new JFileChooser();
+            chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            if (chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
+                File folder = chooser.getSelectedFile();
+                csvPath[0] = folder.getAbsolutePath() + "/Dataset.csv";
+            }
+        });
+
+        // JSON Folder Chooser
+        jsonBtn.addActionListener(e -> {
+            JFileChooser chooser = new JFileChooser();
+            chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            if (chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
+                File folder = chooser.getSelectedFile();
+                jsonPath[0] = folder.getAbsolutePath() + "/Dataset.json";
+            }
+        });
+
+        // Run Builder Button
+        runBtn.addActionListener(e -> {
+            if (samplePath[0] != null && csvPath[0] != null && jsonPath[0] != null) {
+                try {
+                    BuildDataset builder = new BuildDataset(samplePath[0], csvPath[0], jsonPath[0]);
+                    builder.process();
+
+                    JOptionPane.showMessageDialog(frame, "Processing complete.");
+                    viewCSVBtn.setEnabled(true);  // ✅ Enable after processing
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                    JOptionPane.showMessageDialog(frame, "Error: " + ex.getMessage());
+                }
+            } else {
+                JOptionPane.showMessageDialog(frame, "Please select all files/folders first.");
+            }
+        });
+
+        // View CSV Button
+        viewCSVBtn.addActionListener(e -> {
+            if (csvPath[0] != null) {
+                CSVViewer.showCSVViewer(csvPath[0]);  // ✅ Open CSV in new window
+            } else {
+                JOptionPane.showMessageDialog(frame, "CSV path is missing.");
+            }
+        });
+
+        // Add buttons to frame
+        frame.add(sampleBtn);
+        frame.add(csvBtn);
+        frame.add(jsonBtn);
+        frame.add(runBtn);
+        frame.add(viewCSVBtn);  // ✅ Add the new button
+
+        frame.setVisible(true);
+    }
+}

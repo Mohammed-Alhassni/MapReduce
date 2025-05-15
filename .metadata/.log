@@ -10345,3 +10345,35 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY ch.qos.logback.classic 1 0 2025-05-15 06:41:42.961
 !MESSAGE Logback config file: /Users/mohmmedmsoud/Desktop/sem2 temp/pds project/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+!SESSION 2025-05-15 06:46:17.034 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_OM
+Framework arguments:  -product org.eclipse.epp.package.dsl.product -keyring /Users/mohmmedmsoud/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.dsl.product -keyring /Users/mohmmedmsoud/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2025-05-15 06:46:20.087
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-05-15 06:46:20.346
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.29.0 (937) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-05-15 06:46:25.769
+!MESSAGE Logback config file: /Users/mohmmedmsoud/Desktop/sem2 temp/pds project/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+!SESSION 2025-05-15 06:47:54.196 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_OM
+Framework arguments:  -product org.eclipse.epp.package.dsl.product -keyring /Users/mohmmedmsoud/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.dsl.product -keyring /Users/mohmmedmsoud/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2025-05-15 06:47:57.488
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-05-15 06:47:57.698
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.29.0 (937) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-05-15 06:48:05.676
+!MESSAGE Logback config file: /Users/mohmmedmsoud/Desktop/sem2 temp/pds project/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
