@@ -1,0 +1,74 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.File;
+import com.opencsv.exceptions.CsvValidationException;
+import java.io.IOException;
+
+public class MainUI {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("File and Folder Chooser");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 200);
+        frame.setLayout(new FlowLayout());
+
+        JButton chooseSampleBtn = new JButton("Choose Sample File");
+        JButton chooseCSVFolderBtn = new JButton("Choose CSV Folder");
+        JButton chooseJSONFolderBtn = new JButton("Choose JSON Folder");
+        JButton runBtn = new JButton("Run BuildDataset");
+
+        // Paths storage
+        final String[] samplePath = new String[1];
+        final String[] csvPath = new String[1];
+        final String[] jsonPath = new String[1];
+
+        chooseSampleBtn.addActionListener(e -> {
+            JFileChooser fileChooser = new JFileChooser();
+            if (fileChooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
+                samplePath[0] = fileChooser.getSelectedFile().getAbsolutePath();
+                JOptionPane.showMessageDialog(frame, "Selected sample file:\n" + samplePath[0]);
+            }
+        });
+
+        chooseCSVFolderBtn.addActionListener(e -> {
+            JFileChooser folderChooser = new JFileChooser();
+            folderChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            if (folderChooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
+                csvPath[0] = folderChooser.getSelectedFile().getAbsolutePath() + "/Dataset.csv";
+                JOptionPane.showMessageDialog(frame, "CSV will be saved at:\n" + csvPath[0]);
+            }
+        });
+
+        chooseJSONFolderBtn.addActionListener(e -> {
+            JFileChooser folderChooser = new JFileChooser();
+            folderChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            if (folderChooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
+                jsonPath[0] = folderChooser.getSelectedFile().getAbsolutePath() + "/Dataset.json";
+                JOptionPane.showMessageDialog(frame, "JSON will be saved at:\n" + jsonPath[0]);
+            }
+        });
+
+        runBtn.addActionListener(e -> {
+            if (samplePath[0] != null && csvPath[0] != null && jsonPath[0] != null) {
+                try {
+                    BuildDataset builder = new BuildDataset(samplePath[0], csvPath[0], jsonPath[0]);
+                    builder.process();
+                    JOptionPane.showMessageDialog(frame, "Processing complete. Check console for time.");
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                    JOptionPane.showMessageDialog(frame, "Error: " + ex.getMessage());
+                }
+            } else {
+                JOptionPane.showMessageDialog(frame, "Please select all files/folders first.");
+            }
+        });
+
+        // Add buttons
+        frame.add(chooseSampleBtn);
+        frame.add(chooseCSVFolderBtn);
+        frame.add(chooseJSONFolderBtn);
+        frame.add(runBtn);
+
+        frame.setVisible(true);
+    }
+}

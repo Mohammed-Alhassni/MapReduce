@@ -1,0 +1,61 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.File;
+
+public class MainUI {
+    public static void main(String[] args) {
+        // Create the main frame
+        JFrame frame = new JFrame("File and Folder Chooser");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 200);
+        frame.setLayout(new FlowLayout());
+
+        // Create buttons
+        JButton chooseFileBtn = new JButton("Choose File");
+        JButton chooseFolder1Btn = new JButton("Choose Folder 1");
+        JButton chooseFolder2Btn = new JButton("Choose Folder 2");
+
+        // Action for Choose File button
+        chooseFileBtn.addActionListener(e -> {
+            JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            int result = fileChooser.showOpenDialog(frame);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File selectedFile = fileChooser.getSelectedFile();
+                JOptionPane.showMessageDialog(frame, "Selected File:\n" + selectedFile.getAbsolutePath());
+            }
+        });
+
+        // Action for Choose Folder 1 button
+        chooseFolder1Btn.addActionListener(e -> {
+            JFileChooser folderChooser = new JFileChooser();
+            folderChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            int result = folderChooser.showOpenDialog(frame);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File selectedFolder = folderChooser.getSelectedFile();
+                JOptionPane.showMessageDialog(frame, "Selected Folder 1:\n" + selectedFolder.getAbsolutePath());
+            }
+        });
+
+        // Action for Choose Folder 2 button
+        chooseFolder2Btn.addActionListener(e -> {
+            JFileChooser folderChooser = new JFileChooser();
+            folderChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            int result = folderChooser.showOpenDialog(frame);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File selectedFolder = folderChooser.getSelectedFile();
+                JOptionPane.showMessageDialog(frame, "Selected Folder 2:\n" + selectedFolder.getAbsolutePath());
+            }
+        });
+
+        // Add buttons to the frame
+        frame.add(chooseFileBtn);
+        frame.add(chooseFolder1Btn);
+        frame.add(chooseFolder2Btn);
+
+        // Make frame visible
+        frame.setVisible(true);
+    }
+}
+
