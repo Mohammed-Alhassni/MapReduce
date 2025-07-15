@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="lib" path="/Users/mohmmedmsoud/Desktop/sem2 temp/MapReducer/JSON Builder Requirments/commons-lang3-3.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/mohmmedmsoud/Desktop/sem2 temp/MapReducer/JSON Builder Requirments/jackson-annotations-2.9.9.jar"/>
+	<classpathentry kind="lib" path="/Users/mohmmedmsoud/Desktop/sem2 temp/MapReducer/JSON Builder Requirments/jackson-core-2.9.9.jar"/>
+	<classpathentry kind="lib" path="/Users/mohmmedmsoud/Desktop/sem2 temp/MapReducer/JSON Builder Requirments/jackson-databind-2.9.9.3.jar"/>
+	<classpathentry kind="lib" path="/Users/mohmmedmsoud/Desktop/sem2 temp/MapReducer/JSON Builder Requirments/opencsv-5.7.1.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
